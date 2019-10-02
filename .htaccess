@@ -1,7 +1,0 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-Options Indexes
-ErrorDocument 404 Página não encontrada
-DirectoryIndex index.html       
-order deny,allow
