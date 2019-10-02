@@ -1,0 +1,10 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options Indexes
+ErrorDocument 404 Página não encontrada
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(infdev\.com\.br)(:80)? [NC]
+RewriteRule ^(.*) https://www.infdev.com.br/$1 [R=301,L]
+DirectoryIndex index.html       
+order deny,allow
