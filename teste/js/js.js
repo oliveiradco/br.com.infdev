@@ -18,13 +18,13 @@ form.submit.addEventListener('click', () => {
         }
     };
     const requestData = `username=${form.username.value}&password=${form.password.value}`;
-    request.open('post', 'validar-usuario.php');
+    request.open('post', '/pages/validar-usuario.php');
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     request.send(requestData);
 });
 function handleResponse (responseObject) {
     if (responseObject.ok) {
-        location.href = 'dashboard.html';
+        location.href = '/pages/dashboard.html';
     } else {
         while (form.messages.firstChild) {
             form.messages.removeChild(form.messages.firstChild);
